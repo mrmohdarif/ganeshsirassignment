@@ -39,10 +39,10 @@ function App() {
               arr[i]=false
              
             }
-            // if(arr[0]===true)
-            // {
-            //   arr[0]=false
-            // }
+            if(arr[0]===true)
+            {
+              arr[0]=false
+            }
           }      
       }  
   }
@@ -53,9 +53,7 @@ function App() {
      
         console.log(arr[i])
         arr[i] = true;
-        setData3(e.target.value)
-        
-        
+        setData3(e.target.value) 
     }
    
   }
@@ -78,8 +76,7 @@ function App() {
             </div>
           })
         }
-        {/* <button onClick={()=>setCount(count++)}>Inc</button>
-       <button onClick={()=>setCount(count--)}>Dex</button> */}
+      
       </div>
       <label>Task Line --2</label>
 
@@ -88,7 +85,7 @@ function App() {
           data2?.map((item, index) => {
             return <div style={{ display: 'flex' }} key={index}>
               <div style={{ display: 'flex', gap: '10px', filter: arr[index] ? 'blur(3px)' : 'none' }}>
-                <input type="radio" name='item' value={index} onChange={handleRadio1} disabled={arr[index]} />
+                <input type="radio" name='item' value={index} disabled={arr[index]} />
                 <img src={item.image} />
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <span>{item.category}{index}</span>
@@ -98,8 +95,6 @@ function App() {
             </div>
           })
         }
-        {/* <button onClick={()=>setCount(count++)}>Inc</button>
-       <button onClick={()=>setCount(count--)}>Dex</button> */}
       </div>
       <label>Task Line --3</label>
 
@@ -108,7 +103,7 @@ function App() {
           data2?.map((item, index) => {
             return <div style={{ display: 'flex' }} key={index}>
               <div style={{ display: 'flex', gap: '10px', filter: arr[index] ? 'blur(3px)' : 'none' }}>
-                <input type="radio" name='item' value={index} onChange={handleRadio1} disabled={arr[index]} />
+                <input type="radio" name='item' value={index}  disabled={arr[index]} />
                 <img src={item.image} />
                 <div style={{ display: 'flex', flexDirection: 'column' }}>
                   <span>{item.category}{index}</span>
@@ -117,10 +112,10 @@ function App() {
               </div>
             </div>
           })
-        }
-        {/* <button onClick={()=>setCount(count++)}>Inc</button>
-       <button onClick={()=>setCount(count--)}>Dex</button> */}
+        }    
       </div>
+      <button onClick={()=>setCount(count++)}>Inc</button>
+      <button onClick={()=>setCount(count--)}>Dex</button>
     </div>
   );
 }
